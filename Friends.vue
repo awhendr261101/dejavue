@@ -2,7 +2,7 @@
   <div class="friends">
     <h1>My Friends</h1>
     <div class="row">
-    <Card v-for="(friend, index) in friends" :key="index" style="width: 18rem;">
+    <Card v-for="(friend, index) in friends" :key="index" style="width: 18rem;" class="male" id="male">
     <template #cardHeader>
         <img class="img-fluid" :src="friend.profile" :alt="friend.firstName" loading="lazy">
     </template>
@@ -31,22 +31,26 @@ export default {
         {
           firstName: 'Daniel',
           lastName: 'stein',
-          profile:' https://chelsea-julie.github.io/all-images/images/bubbles.png'
+          profile:' https://chelsea-julie.github.io/all-images/images/bubbles.png',
+          gender : 'male'
         },
         {
           firstName: 'Cherry',
           lastName: 'Werry',
-          profile:' https://chelsea-julie.github.io/all-images/images/buttercup.png'
+          profile:' https://chelsea-julie.github.io/all-images/images/buttercup.png',
+          gender : 'female'
         },
         {
           firstName: 'Darry',
           lastName: 'Scary',
-          profile:'https://awhendr261101.github.io/allImages/images/Daniel.png'
+          profile:'https://awhendr261101.github.io/allImages/images/Daniel.png',
+          gender : 'male'
         },
         {
           firstName: 'Merry',
           lastName: 'Sterry',
-          profile:'https://awhendr261101.github.io/allImages/images/yoruichi.jpg'
+          profile:'https://awhendr261101.github.io/allImages/images/yoruichi.jpg',
+          gender : 'female'
         },
     ]
     }
@@ -55,6 +59,15 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+
+#male{
+  border: 2px solid red;
+  display: none;
+}
+
+.female{
+  border: 2px solid blue;
+}
 
 </style>
